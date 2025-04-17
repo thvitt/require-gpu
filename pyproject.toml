@@ -1,0 +1,15 @@
+[project]
+name = "require-gpu"
+version = "0.1.0"
+description = "A tool to wait for GPUs and run scripts acccordingly."
+authors = [{ name = "Thorsten Vitt", email = "thorsten.vitt@uni-wuerzburg.de" }]
+requires-python = ">=3.13"
+dependencies = ["ansi2html>=1.9.2", "gpustat>=1.1.1"]
+
+[project.scripts]
+require-gpu = "require_gpu:main"
+wait-for-gpu = "require_gpu:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
